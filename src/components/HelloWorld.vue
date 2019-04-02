@@ -1,6 +1,15 @@
-<template>
+ 
+ <script lang="ts" src="./HelloWorld.ts">
+</script>
+ <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <div class="container page-container">
+      <h1>リンク一覧</h1>
+      <ul>
+        aaaaa
+      </ul>
+    </div>
+    <h1>!"#$1234567{{ title }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -32,16 +41,6 @@
     </ul>
   </div>
 </template>
-
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-
-@Component
-export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
-}
-</script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 h3 {
