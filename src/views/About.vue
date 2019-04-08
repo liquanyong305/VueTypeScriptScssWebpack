@@ -18,13 +18,13 @@
     import Vue from 'vue';
     import { State, Action, Getter } from 'vuex-class';
     import Component from 'vue-class-component';
-    import { ProfileState, User } from './store/profile/types';
+    import { ProfileState, User } from '../profile/types';
     const namespace: string = 'profile';
 @Component
-    export default class UserDetail extends Vue {
-        @State('profile') profile: ProfileState;
+    export default class About extends Vue {
+        @State('profile') profile!: ProfileState;
         @Action('fetchData', { namespace }) fetchData: any;
-        @Getter('fullName', { namespace }) fullName: string;
+        @Getter('fullName', { namespace }) fullName!: string;
 
         mounted() {
             // fetching data as soon as the component's been mounted
