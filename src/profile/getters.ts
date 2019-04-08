@@ -10,5 +10,3 @@ export const getters: GetterTree<ProfileState, RootState> = {
         return `${firstName} ${lastName}`;
     }
 };
-
-
