@@ -1,7 +1,10 @@
 # vue-typescript
 
 ## Project setup
+## install Json-server
 ```
+npm install
+cd json-server
 npm install
 ```
 
@@ -9,7 +12,10 @@ npm install
 ```
 npm run serve
 ```
-
+### Start Json-server
+```
+json-server --watch db1.json
+```
 ### Compiles and minifies for production
 ```
 npm run build

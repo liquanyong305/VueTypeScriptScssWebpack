@@ -6,10 +6,10 @@
     <div class="container page-container">
       <h1>リンク一覧</h1>
       <ul>
-        aaaaa
+        
       </ul>
     </div>
-    <h1>!"#$1234567{{ title }}</h1>
+    <h1>{{ title }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
