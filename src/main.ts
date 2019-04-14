@@ -3,8 +3,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store/store';
 
-import './registerServiceWorker';
-import './style.scss';
+import './scss/style.scss';
 
 Vue.config.productionTip = false;
 
@@ -13,4 +12,3 @@ new Vue({
   store,
   render: (h) => h(App),
 }).$mount('#app');
-

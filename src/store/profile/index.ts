@@ -7,7 +7,7 @@ import { RootState } from '../types';
 
 export const state: ProfileState = {
     user: undefined,
-    error: false
+    error: false,
 };
 
 const namespaced: boolean = true;
@@ -17,5 +17,5 @@ export const profile: Module<ProfileState, RootState> = {
     state,
     getters,
     actions,
-    mutations
+    mutations,
 };

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { profile } from './profile/index';
+import { profile } from './profile';
 import { RootState } from './types';
 
 Vue.use(Vuex);

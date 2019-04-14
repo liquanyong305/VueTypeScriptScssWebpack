@@ -1,9 +1,9 @@
+import { Component, Vue } from 'vue-property-decorator';
+import WithRender from './HelloWorld.html';
 
-import Vue from 'vue';
-import Component from 'vue-class-component';
-
+@WithRender
 @Component
 export default class HelloWorld extends Vue {
-    name: string = 'app';
-    title: string =  'HOME COMPONENT';
+   public name: string = 'app';
+   public title: string =  'HOME COMPONENT';
 }

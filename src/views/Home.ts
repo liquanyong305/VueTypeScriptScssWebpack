@@ -1,7 +1,9 @@
-import Vue from 'vue';
-import HelloWorld from '../components/HelloWorld.vue';
-import Component from 'vue-class-component';
-import Profile from '@/components/Profile.vue'; 
+import HelloWorld from '@/components/HelloWorld';
+import { Component, Vue } from 'vue-property-decorator';
+import Profile from '@/components/Profile.vue';
+import WithRender from './Home.html';
+
+@WithRender
 @Component({
     components: {
         HelloWorld,
@@ -10,6 +12,6 @@ import Profile from '@/components/Profile.vue';
   })
 
 export default class Home extends Vue {
-    name: string = 'app';
-    msg: string = 'This is page 1';
+    public name: string = 'app';
+    public msg: string = 'This is page 1';
 }

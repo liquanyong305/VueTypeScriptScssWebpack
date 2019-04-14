@@ -22,17 +22,17 @@
   const namespace: string = 'profile';
   @Component
   export default class Profile extends Vue {
-    @State('profile') profile!: ProfileState;
-    @Action('fetchData', {namespace}) fetchData: any;
-    @Getter('fullName', {namespace}) fullName!: string;
+    @State('profile') private profile!: ProfileState;
+    @Action('fetchData', {namespace}) private fetchData: any;
+    @Getter('fullName', {namespace}) private fullName!: string;
 
     constructor() {
       super();
     }
-    mounted() {
+    private mounted() {
       // fetching data as soon as the component's been mounted
       this.fetchData();
-      //console.log(this.$http.get('http://jsonplaceholder.typicode.com/posts'));
+      // console.log(this.$http.get('http://jsonplaceholder.typicode.com/posts'));
     }
     // computed variable based on user's email
     get email() {
