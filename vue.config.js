@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: "distSample",
   configureWebpack: {
     module: {
       rules: [
@@ -14,10 +15,15 @@ module.exports = {
         },
         // Make sure to add a loader that can process the asset files
         {
-          test: /\.(jpg|png|gif)/,
+          test: /\.(png|jpg|jpeg|gif)$/,
           loader: 'file-loader',
           options: {
             // ...
+            name: '[hash].[ext]',
+            outputPath : '/img/',
+            publicPath : function(path){
+              return '../' + path;
+           }
           }
         }
       ]
