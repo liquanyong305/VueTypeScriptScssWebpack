@@ -1,0 +1,16 @@
+{
+  "get_users": 
+                         {
+                           "firstName": "ian", 
+                           "lastName": "josn", 
+                           "email":"test@gmail.com",
+                           "phone": "080-0000-1111"
+                          }
+
+  ,"get_company": 
+                          {
+                           "name": "uniDigi", 
+                           "address": "Tokyo", 
+                           "tel": "03-0000-1111"
+                          }
+}
