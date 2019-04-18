@@ -1,4 +1,7 @@
+const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
+  outputDir: 'dist/asset',
   publicPath: "distSample",
   configureWebpack: {
     module: {
@@ -9,24 +12,32 @@ module.exports = {
           exclude: /index.html/,
           options: {
             transformAssetUrls: {
-              img: 'src'
+              video: ['src', 'poster'],
+              source: 'src',
+              img: 'src',
+              image: 'xlink:href'
             }
           }
         },
-        // Make sure to add a loader that can process the asset files
+        //Make sure to add a loader that can process the asset files
         {
           test: /\.(png|jpg|jpeg|gif)$/,
           loader: 'file-loader',
           options: {
-            // ...
-            name: '[hash].[ext]',
-            outputPath : '/img/',
+            name: '[name].[ext]',
+            outputPath : 'images/',
             publicPath : function(path){
-              return '../' + path;
-           }
+                return '../' + path;
+            }
+            /* es2015ならば
+            publicPath : path => '../' + path
+            で書けます。*/
           }
-        }
+        },
       ]
     }
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('css/[name].css')
+  ]
 }
